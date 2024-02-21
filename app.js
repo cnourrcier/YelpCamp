@@ -20,8 +20,8 @@ const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
 const MongoStore = require('connect-mongo');
 
-// const dbUrl = process.env.DB_URL;
-const dbUrl = 'mongodb://127.0.0.1:27017/yelp-camp';
+const dbUrl = process.env.DB_URL;
+// const dbUrl = 'mongodb://127.0.0.1:27017/yelp-camp';
 
 mongoose.connect(dbUrl);
 
@@ -53,7 +53,7 @@ const store = MongoStore.create({
     }
 });
 
-store.on('error', function(e){
+store.on('error', function (e) {
     console.log("SESSION STORE ERROR", e)
 })
 
