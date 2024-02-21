@@ -23,8 +23,6 @@ const MongoStore = require('connect-mongo');
 const dbUrl = process.env.DB_URL;
 // const dbUrl = 'mongodb://127.0.0.1:27017/yelp-camp';
 
-console.log(`***** MAPBOX_TOKEN value set to: ${process.env.MAPBOX_TOKEN}`);
-
 mongoose.connect(dbUrl);
 
 const db = mongoose.connection;
